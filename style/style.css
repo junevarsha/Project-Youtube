@@ -4,7 +4,9 @@
 }
 
 .search-bar input {
-	width: 75%;
+	width: 90%;
+	border-style: solid;
+	border-width: thick;
 }
 
 .video-item img {
@@ -24,4 +26,8 @@
 
 .list-group-item:hover{
 	background-color: #eee;
+}
+
+.container {
+	background-color: #6b020c;
 }

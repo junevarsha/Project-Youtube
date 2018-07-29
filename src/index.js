@@ -1,3 +1,22 @@
+/**
+what is react?
+react is a js library 
+used to produce HTML shown to user in web browser
+
+Components are snippets that produce HTML
+-> writing js that ultimately produces html
+
+ES6 -> webpack and babel transpile the JSX(subset of js but looks like HTML)
+
+JSX purpose -> to make code more legible
+
+ReactDOM vs React -> to render to DOM use ReactDOM
+
+React - > works with react components
+knows how to nest them together, render 
+
+*/
+
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -31,7 +50,7 @@ class App extends Component {
 		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300)
 		return (
 			<div>
-				<SearchBar onSearchTermChange={videoSearch}/>
+				<SearchBar onSearchTermChange={videoSearch} />
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
 				onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
@@ -40,6 +59,9 @@ class App extends Component {
 		);
 	}
 }
+
+// Pass an instance not a class, to pass an instance
+// just wrap it in a jsx tags
 
 
 ReactDOM.render(<App />, document.querySelector('.container'));
