@@ -26,6 +26,9 @@ import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyDKa0ezpNqKcrdnQx0T0M_rREb3WRL2mSg'
 
+// Downwards data flow
+// most parent component in app should be responsible
+// for fetching data
 
 class App extends Component {
 	constructor(props) {
@@ -40,10 +43,7 @@ class App extends Component {
 	}
 	videoSearch(term) {
 		YTSearch({key: API_KEY, term: term}, (videos) => {
-			this.setState({ 
-				videos: videos,
-				selectedVideo: videos[0]
-			});
+			this.setState({ videos, selectedVideo: videos[0] });
 		});
 	}
 	render() {

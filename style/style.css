@@ -22,6 +22,9 @@
 
 .list-group-item {
 	cursor: pointer;
+	/* TODO figure out why this is not getting applied here*/
+	border-style: solid;
+	border-width: thick;
 }
 
 .list-group-item:hover{
