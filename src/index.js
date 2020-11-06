@@ -62,6 +62,7 @@ class App extends Component {
 
 // Pass an instance not a class, to pass an instance
 // just wrap it in a jsx tags
+// testing...
 
 
 ReactDOM.render(<App />, document.querySelector('.container'));
